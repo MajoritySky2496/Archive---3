@@ -15,4 +15,12 @@ class ArchiveStore {
             println(entry.key)
         }
     }
+    fun CheckingDuplicateKeyArchives(key: String):Boolean{
+        if (archives.get(key) == null) {
+            return true
+        }
+            else
+                println("Ошибка такой архив уже существует")
+                return false
+    }
 }
